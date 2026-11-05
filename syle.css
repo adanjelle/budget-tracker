@@ -65,3 +65,151 @@ button {
     border-radius: 10px;
     border-left: 5px solid #21865b;
 }
+/* Expense Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: left;
+}
+
+thead {
+    background-color: #174c3c;
+    color: white;
+}
+
+/* Alternating row colors */
+tr:nth-child(even) {
+    background-color: #e4f3eb;
+}
+
+tr:nth-child(odd) {
+    background-color: white;
+}
+/* Category Dropdown */
+select {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+/* Form Button */
+button {
+    margin-top: 20px;
+    padding: 10px 18px;
+    background-color: #21865b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #174c3c;
+}
+/* Logo styling */
+#page-header img {
+    display: block;
+    margin: 0 auto 10px;
+}
+
+/* Budget video section */
+#budget-video {
+    background-color: white;
+    padding: 20px;
+    margin-top: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px #ddd;
+    text-align: center;
+}
+
+/* Responsive video */
+#budget-video iframe {
+    max-width: 100%;
+    border-radius: 8px;
+}
+/* Table row hover effect */
+tbody tr:hover {
+    background-color: #c8e6d5;
+    transition: background-color 0.3s ease;
+}
+button {
+    margin-top: 20px;
+    padding: 10px 18px;
+    background-color: #21865b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/* Instructions section */
+#tracker-guide {
+    background-color: white;
+    padding: 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px #ddd;
+}
+
+/* Summary heading */
+summary {
+    color: #174c3c;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* Instructions text */
+#tracker-guide p,
+#tracker-guide li {
+    line-height: 1.6;
+}
+/* 1. Descendant selector */
+/* Targets all table cells inside the expenses section */
+#expenses-list td {
+    font-size: 15px;
+    color: #333;
+}
+
+/* 2. Direct child selector */
+/* Targets direct input children of the expense form */
+.expense-form > form > input {
+    margin-bottom: 10px;
+}
+
+/* 3. Pseudo-class based on position */
+/* Styles the first row in the expense table */
+tbody tr:first-child {
+    font-weight: bold;
+}
+
+/* Alternating table row colors */
+tbody tr:nth-child(even) {
+    background-color: #e4f3eb;
+}
+
+/* 4. Negation pseudo-class */
+/* Targets inputs except submit buttons */
+input:not([type="submit"]) {
+    background-color: #ffffff;
+}
+
+/* 5. Focus pseudo-class */
+/* Changes input appearance when selected */
+input:focus {
+    border: 2px solid #21865b;
+    outline: none;
+    background-color: #f0fff5;
+}
