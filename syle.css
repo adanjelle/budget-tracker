@@ -563,3 +563,141 @@ body {
         --card-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
     }
 }
+/* Interactive SpendWise sections */
+
+.interaction-panel,
+.transaction-section {
+    background: var(--surface-color, #ffffff);
+    padding: 24px;
+    margin: 20px 0;
+    border: 1px solid var(--border-color, #e5e9ed);
+    border-radius: 12px;
+    box-shadow: var(--card-shadow, 0 3px 10px rgba(0,0,0,0.04));
+}
+
+.interaction-panel form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+    margin-bottom: 20px;
+}
+
+.interaction-panel input,
+.interaction-panel select {
+    padding: 12px;
+    border: 1px solid var(--border-color, #ddd);
+    border-radius: 8px;
+    font: inherit;
+}
+
+.interaction-panel button,
+.transaction-section button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    background: var(--accent-color, #21865b);
+    color: white;
+    cursor: pointer;
+}
+
+.interaction-panel button:hover,
+.transaction-section button:hover {
+    opacity: 0.85;
+}
+
+#feedback-message {
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.transaction-section table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.transaction-section th,
+.transaction-section td {
+    padding: 12px;
+    border-bottom: 1px solid var(--border-color, #e5e9ed);
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .transaction-section {
+        overflow-x: auto;
+    }
+
+    .transaction-section table {
+        min-width: 500px;
+    }
+}
+/* Interactive SpendWise sections */
+
+.interaction-panel,
+.transaction-section {
+    background: var(--surface-color, #ffffff);
+    padding: 24px;
+    margin: 20px 0;
+    border: 1px solid var(--border-color, #e5e9ed);
+    border-radius: 12px;
+    box-shadow: var(--card-shadow, 0 3px 10px rgba(0,0,0,0.04));
+}
+
+.interaction-panel form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+    margin-bottom: 20px;
+}
+
+.interaction-panel input,
+.interaction-panel select {
+    padding: 12px;
+    border: 1px solid var(--border-color, #ddd);
+    border-radius: 8px;
+    font: inherit;
+}
+
+.interaction-panel button,
+.transaction-section button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    background: var(--accent-color, #21865b);
+    color: white;
+    cursor: pointer;
+}
+
+.interaction-panel button:hover,
+.transaction-section button:hover {
+    opacity: 0.85;
+}
+
+#feedback-message {
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.transaction-section table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.transaction-section th,
+.transaction-section td {
+    padding: 12px;
+    border-bottom: 1px solid var(--border-color, #e5e9ed);
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .transaction-section {
+        overflow-x: auto;
+    }
+
+    .transaction-section table {
+        min-width: 500px;
+    }
+}
