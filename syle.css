@@ -1,5 +1,15 @@
 
 /* Element selector */
+
+/* Website Color Palette */
+:root {
+    --primary-color: #174C3C;
+    --accent-color: #21865B;
+    --light-green: #E4F3EB;
+    --background-color: #F4F6F9;
+    --white: #FFFFFF;
+    --text-color: #333333;
+}
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f6f9;
@@ -212,4 +222,321 @@ input:focus {
     border: 2px solid #21865b;
     outline: none;
     background-color: #f0fff5;
+}
+/* Main page */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Main heading */
+#page-header {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* Section headings */
+h2 {
+    color: var(--primary-color);
+}
+
+/* Form and video sections */
+.expense-form,
+#budget-video,
+#tracker-guide {
+    background-color: var(--white);
+}
+
+/* Buttons */
+button {
+    background-color: var(--accent-color);
+    color: var(--white);
+}
+
+button:hover {
+    background-color: var(--primary-color);
+}
+
+/* Expense section */
+#expenses-list {
+    background-color: var(--light-green);
+    border-left: 5px solid var(--accent-color);
+}
+
+/* Table header */
+thead {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+/* Alternating table rows */
+tbody tr:nth-child(even) {
+    background-color: var(--light-green);
+}
+
+/* Table hover */
+tbody tr:hover {
+    background-color: #C8E6D5;
+}
+
+/* Input focus */
+input:focus,
+select:focus {
+    border: 2px solid var(--accent-color);
+    outline: none;
+}
+/* =========================
+   TYPOGRAPHY
+========================= */
+
+/* Body font */
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Main heading */
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+/* Section headings */
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 23px;
+    font-weight: 600;
+}
+
+/* Form labels */
+label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* Input fields and dropdown */
+input,
+select {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+}
+
+/* Buttons */
+button {
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* Expense table */
+table {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+}
+
+th {
+    font-weight: 700;
+}
+
+/* Instructions */
+summary {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+#tracker-guide p,
+#budget-video p {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+}
+/* =========================
+   EXPENSE TABLE STYLING
+========================= */
+
+#expenses-list {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: var(--white);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th,
+td {
+    padding: 14px 16px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+thead {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+th {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+td {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+}
+
+/* Alternating row colors */
+tbody tr:nth-child(even) {
+    background-color: var(--light-green);
+}
+
+tbody tr:nth-child(odd) {
+    background-color: var(--white);
+}
+
+/* Table hover effect */
+tbody tr:hover {
+    background-color: #c8e6d5;
+    transition: background-color 0.3s ease;
+}
+/* =========================
+   ADD EXPENSE FORM
+========================= */
+
+.expense-form {
+    background-color: var(--white);
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Form labels */
+.expense-form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 7px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* Input fields and dropdown */
+.expense-form input,
+.expense-form select {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    background-color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    transition: border-color 0.3s ease;
+}
+
+/* Input focus effect */
+.expense-form input:focus,
+.expense-form select:focus {
+    border-color: var(--accent-color);
+    outline: none;
+}
+
+/* Add Expense button */
+.expense-form button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 22px;
+    background-color: var(--accent-color);
+    color: var(--white);
+    border: none;
+    border-radius: 7px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button hover */
+.expense-form button:hover {
+    background-color: var(--primary-color);
+}
+/* Mobile-friendly table */
+@media (max-width: 600px) {
+    #expenses-list {
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 550px;
+    }
+
+    th,
+    td {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .expense-form {
+        padding: 15px;
+    }
+}
+/* Page Heading Card */
+#page-header {
+    background-color: var(--primary-color);
+    color: var(--white);
+
+    /* Box Model */
+    margin: 10px 0 25px;
+    padding: 30px 20px;
+    border: 2px solid var(--primary-color);
+    border-radius: 15px;
+
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+/* Add Expense Form Card */
+.expense-form {
+    background-color: var(--white);
+
+    /* Box Model */
+    margin: 0 0 25px;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+}
+/* Expense Table Card */
+#expenses-list {
+    background-color: var(--white);
+
+    /* Box Model */
+    margin: 0 0 25px;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+
+    overflow-x: auto;
+}
+/* Main Page Layout */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/* Consistent box sizing */
+* {
+    box-sizing: border-box;
 }
