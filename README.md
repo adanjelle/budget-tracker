@@ -1,31 +1,54 @@
-# SpendWise Dashboard
+# SpendWise – Personal Budget Tracker
 
-**A Modern Personal Finance Dashboard**
+**Track Smart. Spend Wisely.**
 
-SpendWise is a responsive personal finance dashboard designed to provide a clean and organized overview of income, expenses, savings, and spending categories.
+## Project Overview
 
-This project focuses on building a modern dashboard interface using HTML5 and CSS3, with an emphasis on CSS Grid, Flexbox, responsive layouts, and reusable CSS custom properties.
+SpendWise is a personal budgeting application developed using HTML, CSS, and JavaScript. It helps users manage their monthly budgets, record expenses, monitor spending, and calculate their remaining balance.
+
+The project demonstrates fundamental web development concepts, including responsive design, JavaScript variables, arrays, functions, conditional statements, loops, DOM manipulation, and event listeners.
 
 ## Features
 
-- **Dashboard Layout:** Modern layout featuring a sidebar, navigation menu, and main content area.
-- **Financial Summary Cards:** Displays total balance, monthly income, and monthly expenses.
-- **Expense Categories:** Six category cards covering Food, Transport, Rent, Entertainment, Savings, and Utilities.
-- **Recent Transactions:** Displays sample financial transactions.
-- **Responsive Design:** Adapts to different screen sizes using CSS media queries.
-- **CSS Custom Properties:** Uses reusable CSS variables for consistent application theming.
-- **Dark Theme:** Supports system dark-mode preferences.
-- **Card Micro-interactions:** Smooth hover and keyboard-focus effects.
+### 1. Responsive Dashboard
+- Clean and modern dashboard layout.
+- CSS Grid and Flexbox for page organization.
+- Responsive design for desktop and mobile screens.
+- Light and dark theme support where configured.
+
+### 2. Budget Management
+- Enter and update a monthly budget.
+- Calculate total expenses.
+- Automatically calculate the remaining balance.
+- Monitor spending against the available budget.
+
+### 3. Expense Management
+- Add multiple expense records.
+- Enter expense names, amounts, and categories.
+- Display expenses dynamically in a table.
+- Delete individual expense records.
+
+### 4. Budget Monitoring
+- Identify when spending is within the budget.
+- Receive warnings when 80% or more of the budget is used.
+- Receive alerts when expenses exceed the available budget.
+
+### 5. JavaScript Functionality
+- Variables and data types for storing application information.
+- Arrays for managing multiple expense records.
+- Conditional statements for budget decisions.
+- Loops for processing expense records.
+- Functions for reusable budget calculations.
+- DOM manipulation for updating webpage content.
+- Event listeners for responding to user actions.
 
 ## Technologies Used
 
-- HTML5
-- CSS3
-- CSS Grid
-- CSS Flexbox
-- CSS Custom Properties
-- CSS Media Queries
-- Google Fonts (Inter and Poppins)
+- **HTML5** – Webpage structure.
+- **CSS3** – Styling, layout, responsiveness, and interactions.
+- **JavaScript** – Application logic, calculations, and dynamic updates.
+- **Visual Studio Code** – Development environment.
+- **Git and GitHub** – Version control and project hosting.
 
 ## Project Structure
 
@@ -34,45 +57,17 @@ budget-tracker/
 │
 ├── index.html
 ├── style.css
+├── script.js
 ├── README.md
-│
 ├── index_backup.html
 └── style_backup.css
-```
-
-## CSS Concepts Implemented
-
-### 1. CSS Grid
-Used to structure the overall dashboard layout, financial summary cards, and expense category cards.
-
-### 2. Flexbox
-Used to organize sidebar navigation, header elements, and individual dashboard card contents.
-
-### 3. Responsive Design
-Media queries adapt the dashboard to smaller screens. Below 768px, the dashboard changes to a single-column layout.
-
-### 4. CSS Custom Properties
-The application defines reusable theme variables inside the `:root` selector, including brand, accent, background, surface, and text colours.
-
-### 5. Micro-interactions
-Dashboard cards feature smooth hover and keyboard-focus transitions using CSS transforms and box shadows. Transitions last 200ms.
-
-### 6. Dark Theme
-The dashboard supports automatic dark-mode styling through:
-
-```css
-@media (prefers-color-scheme: dark) {
-    :root {
-        /* Dark theme variables */
-    }
-}
 ```
 
 ## How to Run the Project
 
 1. Clone or download the project repository.
-2. Open the project folder.
-3. Start a local development server:
+2. Open the project folder in Visual Studio Code.
+3. Start a local development server using Python:
 
 ```bash
 python3 -m http.server 8000
@@ -84,27 +79,57 @@ python3 -m http.server 8000
 http://localhost:8000
 ```
 
-## Responsive Testing
+5. Enter your monthly budget.
+6. Add expenses and select their categories.
+7. View the automatically updated budget summary.
+8. Delete expenses to see the calculations update.
 
-The dashboard can be tested using Chrome Developer Tools.
+## Example
 
-1. Open Chrome DevTools.
-2. Enable the Device Toolbar.
-3. Test different viewport sizes.
-4. Verify the single-column layout below 768px.
-5. Test the dark theme using the browser's colour-scheme emulation.
+Suppose a user sets a monthly budget of KSh 20,000 and records:
 
-## Project Scope
+| Expense | Amount |
+|---|---:|
+| Food | KSh 2,000 |
+| Transport | KSh 1,500 |
+| Rent | KSh 8,000 |
+| **Total Expenses** | **KSh 11,500** |
 
-This project focuses on the visual structure and presentation of a personal finance dashboard. Financial figures and transactions are static sample content. Dynamic expense tracking, authentication, and database integration are outside the scope of this stage.
+The remaining balance is:
+
+**KSh 20,000 − KSh 11,500 = KSh 8,500**
+
+## Current Project Limitations
+
+- Expense records are stored in a JavaScript array.
+- Data is not permanently saved.
+- Refreshing the browser resets the budget and expense records.
+- The application does not currently use a backend database or user authentication.
+
+## Learning Objectives
+
+This project demonstrates practical application of:
+
+- HTML page structure.
+- CSS styling and responsive layouts.
+- JavaScript variables and data types.
+- Arrays and loops.
+- Conditional statements.
+- Functions and calculations.
+- DOM manipulation.
+- Event handling.
+
+## Future Improvements
+
+- Add local storage to preserve expenses after refreshing.
+- Introduce expense editing functionality.
+- Add spending charts and visual reports.
+- Implement expense filtering by category.
+- Integrate a database for permanent storage.
+- Add user accounts and authentication.
 
 ## Author
 
 **Adan Jelle Loge**
 
-Computer Science Student  
-Garissa University
-
----
-
-*SpendWise – Track Smart. Spend Wisely.*
+SpendWise – Track Smart. Spend Wisely.
