@@ -1,542 +1,565 @@
 
-/* Element selector */
+/* =========================
+   1. GLOBAL STYLING
+========================= */
+/* =========================
+   SPENDWISE THEME
+   CSS CUSTOM PROPERTIES
+========================= */
 
-/* Website Color Palette */
+:root {
+    /* Brand colors */
+    --brand-color: #174C3C;
+    --accent-color: #21865B;
+
+    /* Background and surfaces */
+    --background-color: #F4F6F9;
+    --surface-color: #FFFFFF;
+    --surface-secondary: #E4F3EB;
+
+    /* Text colors */
+    --text-primary: #333333;
+    --text-secondary: #777777;
+
+    /* Additional theme colors */
+    --border-color: #E5E9ED;
+    --danger-color: #D9534F;
+
+    /* Effects */
+    --card-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+    --card-radius: 12px;
+}
 :root {
     --primary-color: #174C3C;
     --accent-color: #21865B;
-    --light-green: #E4F3EB;
     --background-color: #F4F6F9;
     --white: #FFFFFF;
     --text-color: #333333;
+    --muted-color: #777777;
 }
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f6f9;
+
+* {
     margin: 0;
-    padding: 20px;
-    color: #333;
-}
-
-/* ID selector */
-#page-header {
-    background-color: #174c3c;
-    color: white;
-    text-align: center;
-    padding: 25px;
-    border-radius: 10px;
-    margin-bottom: 25px;
-}
-
-/* Element selector */
-h1 {
-    margin-bottom: 10px;
-}
-
-/* Class selector */
-.expense-form {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 25px;
-    box-shadow: 0 2px 6px #ddd;
-}
-
-/* Element selectors */
-label {
-    display: block;
-    margin-top: 15px;
-    margin-bottom: 5px;
-}
-
-input {
-    width: 100%;
-    padding: 10px;
+    padding: 0;
     box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 5px;
 }
 
-/* Element selector */
-button {
-    margin-top: 20px;
-    padding: 10px 18px;
-    background-color: #21865b;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-/* ID selector */
-#expenses-list {
-    background-color: #e4f3eb;
-    padding: 20px;
-    border-radius: 10px;
-    border-left: 5px solid #21865b;
-}
-/* Expense Table Styling */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    background-color: white;
-}
-
-th, td {
-    border: 1px solid #ccc;
-    padding: 12px;
-    text-align: left;
-}
-
-thead {
-    background-color: #174c3c;
-    color: white;
-}
-
-/* Alternating row colors */
-tr:nth-child(even) {
-    background-color: #e4f3eb;
-}
-
-tr:nth-child(odd) {
-    background-color: white;
-}
-/* Category Dropdown */
-select {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: white;
-    margin-top: 5px;
-    font-size: 15px;
-}
-
-/* Form Button */
-button {
-    margin-top: 20px;
-    padding: 10px 18px;
-    background-color: #21865b;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #174c3c;
-}
-/* Logo styling */
-#page-header img {
-    display: block;
-    margin: 0 auto 10px;
-}
-
-/* Budget video section */
-#budget-video {
-    background-color: white;
-    padding: 20px;
-    margin-top: 25px;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px #ddd;
-    text-align: center;
-}
-
-/* Responsive video */
-#budget-video iframe {
-    max-width: 100%;
-    border-radius: 8px;
-}
-/* Table row hover effect */
-tbody tr:hover {
-    background-color: #c8e6d5;
-    transition: background-color 0.3s ease;
-}
-button {
-    margin-top: 20px;
-    padding: 10px 18px;
-    background-color: #21865b;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-/* Instructions section */
-#tracker-guide {
-    background-color: white;
-    padding: 20px;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px #ddd;
-}
-
-/* Summary heading */
-summary {
-    color: #174c3c;
-    font-weight: bold;
-    cursor: pointer;
-    padding: 10px;
-}
-
-/* Instructions text */
-#tracker-guide p,
-#tracker-guide li {
-    line-height: 1.6;
-}
-/* 1. Descendant selector */
-/* Targets all table cells inside the expenses section */
-#expenses-list td {
-    font-size: 15px;
-    color: #333;
-}
-
-/* 2. Direct child selector */
-/* Targets direct input children of the expense form */
-.expense-form > form > input {
-    margin-bottom: 10px;
-}
-
-/* 3. Pseudo-class based on position */
-/* Styles the first row in the expense table */
-tbody tr:first-child {
-    font-weight: bold;
-}
-
-/* Alternating table row colors */
-tbody tr:nth-child(even) {
-    background-color: #e4f3eb;
-}
-
-/* 4. Negation pseudo-class */
-/* Targets inputs except submit buttons */
-input:not([type="submit"]) {
-    background-color: #ffffff;
-}
-
-/* 5. Focus pseudo-class */
-/* Changes input appearance when selected */
-input:focus {
-    border: 2px solid #21865b;
-    outline: none;
-    background-color: #f0fff5;
-}
-/* Main page */
 body {
+    font-family: 'Inter', sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
 }
 
-/* Main heading */
-#page-header {
+
+/* =========================
+   2. MAIN DASHBOARD LAYOUT
+   CSS GRID
+========================= */
+
+.dashboard {
+    display: grid;
+
+    /* Sidebar and main content */
+    grid-template-columns: 250px 1fr;
+
+    min-height: 100vh;
+}
+
+
+/* =========================
+   3. SIDEBAR
+   FLEXBOX
+========================= */
+
+.sidebar {
     background-color: var(--primary-color);
     color: var(--white);
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 25px 20px;
 }
 
-/* Section headings */
-h2 {
-    color: var(--primary-color);
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 45px;
 }
 
-/* Form and video sections */
-.expense-form,
-#budget-video,
-#tracker-guide {
-    background-color: var(--white);
+.logo h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
 }
 
-/* Buttons */
-button {
+.logo-icon {
     background-color: var(--accent-color);
-    color: var(--white);
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-weight: bold;
 }
 
-button:hover {
-    background-color: var(--primary-color);
+.menu-title {
+    font-size: 12px;
+    color: #B9D5C9;
+    margin-bottom: 15px;
 }
 
-/* Expense section */
-#expenses-list {
-    background-color: var(--light-green);
-    border-left: 5px solid var(--accent-color);
+.navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
-/* Table header */
-thead {
-    background-color: var(--primary-color);
-    color: var(--white);
-}
+.nav-link {
+    display: flex;
+    align-items: center;
 
-/* Alternating table rows */
-tbody tr:nth-child(even) {
-    background-color: var(--light-green);
-}
-
-/* Table hover */
-tbody tr:hover {
-    background-color: #C8E6D5;
-}
-
-/* Input focus */
-input:focus,
-select:focus {
-    border: 2px solid var(--accent-color);
-    outline: none;
-}
-/* =========================
-   TYPOGRAPHY
-========================= */
-
-/* Body font */
-body {
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-/* Main heading */
-h1 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 32px;
-    font-weight: 700;
-}
-
-/* Section headings */
-h2 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 23px;
-    font-weight: 600;
-}
-
-/* Form labels */
-label {
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
-    font-size: 14px;
-}
-
-/* Input fields and dropdown */
-input,
-select {
-    font-family: 'Inter', sans-serif;
-    font-size: 15px;
-}
-
-/* Buttons */
-button {
-    font-family: 'Inter', sans-serif;
-    font-size: 15px;
-    font-weight: 600;
-}
-
-/* Expense table */
-table {
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-}
-
-th {
-    font-weight: 700;
-}
-
-/* Instructions */
-summary {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-}
-
-#tracker-guide p,
-#budget-video p {
-    font-family: 'Inter', sans-serif;
-    line-height: 1.7;
-}
-/* =========================
-   EXPENSE TABLE STYLING
-========================= */
-
-#expenses-list {
-    overflow-x: auto;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    background-color: var(--white);
-    border: 1px solid #ddd;
+    padding: 13px;
     border-radius: 8px;
-    overflow: hidden;
-}
 
-th,
-td {
-    padding: 14px 16px;
-    text-align: left;
-    border: 1px solid #ddd;
-}
-
-thead {
-    background-color: var(--primary-color);
     color: var(--white);
-}
+    text-decoration: none;
 
-th {
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: 14px;
-}
-
-td {
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-}
-
-/* Alternating row colors */
-tbody tr:nth-child(even) {
-    background-color: var(--light-green);
-}
-
-tbody tr:nth-child(odd) {
-    background-color: var(--white);
-}
-
-/* Table hover effect */
-tbody tr:hover {
-    background-color: #c8e6d5;
     transition: background-color 0.3s ease;
 }
-/* =========================
-   ADD EXPENSE FORM
-========================= */
 
-.expense-form {
-    background-color: var(--white);
-    padding: 25px;
-    margin-bottom: 25px;
-    border-radius: 12px;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+.nav-link:hover,
+.nav-link.active {
+    background-color: var(--accent-color);
 }
 
-/* Form labels */
-.expense-form label {
-    display: block;
-    margin-top: 15px;
-    margin-bottom: 7px;
-    font-weight: 600;
+.sidebar-footer {
+    margin-top: auto;
+    font-size: 13px;
+    line-height: 1.8;
+    color: #D5E8DE;
+}
+
+
+/* =========================
+   4. MAIN CONTENT
+========================= */
+
+.main-content {
+    padding: 30px;
+    min-width: 0;
+}
+
+
+/* =========================
+   5. HEADER
+   FLEXBOX
+========================= */
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.welcome h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
     color: var(--primary-color);
 }
 
-/* Input fields and dropdown */
-.expense-form input,
-.expense-form select {
-    width: 100%;
-    padding: 12px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 7px;
-    background-color: #fff;
-    font-family: 'Inter', sans-serif;
-    font-size: 15px;
-    transition: border-color 0.3s ease;
+.welcome p {
+    color: var(--muted-color);
+    margin-top: 5px;
+    font-size: 14px;
 }
 
-/* Input focus effect */
-.expense-form input:focus,
-.expense-form select:focus {
-    border-color: var(--accent-color);
-    outline: none;
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
-/* Add Expense button */
-.expense-form button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 22px;
-    background-color: var(--accent-color);
-    color: var(--white);
-    border: none;
-    border-radius: 7px;
-    font-family: 'Inter', sans-serif;
-    font-size: 15px;
+.notification {
+    font-size: 22px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.avatar {
+    background-color: var(--light-green, #E4F3EB);
+    color: var(--primary-color);
+
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+}
+
+.profile strong,
+.profile small {
+    display: block;
+}
+
+.profile small {
+    color: var(--muted-color);
+    font-size: 11px;
+}
+
+
+/* =========================
+   6. SUMMARY CARDS
+   CSS GRID
+========================= */
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 35px;
+}
+
+.summary-card {
+    background-color: var(--white);
+    padding: 22px;
+    border-radius: 12px;
+    border: 1px solid #E5E9ED;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+}
+
+.summary-card p {
+    color: var(--muted-color);
+    font-size: 14px;
+}
+
+.summary-card h2 {
+    color: var(--primary-color);
+    font-size: 23px;
+}
+
+.summary-card small {
+    color: var(--accent-color);
+}
+
+
+/* =========================
+   7. CATEGORY SECTION
+========================= */
+
+.categories-section {
+    margin-bottom: 35px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.section-heading h2,
+.transactions-section h2 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-color);
+    font-size: 20px;
+}
+
+.section-heading p {
+    color: var(--muted-color);
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.period {
+    background-color: var(--white);
+    border: 1px solid #E1E5E9;
+    border-radius: 8px;
+    padding: 9px 13px;
+    font-size: 12px;
+}
+
+
+/* =========================
+   8. CATEGORY GRID
+   CSS GRID
+========================= */
+
+.category-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+/* =========================
+   9. CATEGORY CARDS
+   FLEXBOX
+========================= */
+
+.category-card {
+    background-color: var(--white);
+    padding: 22px;
+
+    border: 1px solid #E5E9ED;
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.category-icon {
+    background-color: #E4F3EB;
+    padding: 11px;
+    border-radius: 10px;
+    font-size: 22px;
+}
+
+.percentage {
+    color: var(--accent-color);
+    font-size: 13px;
     font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
-/* Button hover */
-.expense-form button:hover {
-    background-color: var(--primary-color);
+.category-card h3 {
+    color: var(--primary-color);
+    font-size: 17px;
 }
-/* Mobile-friendly table */
-@media (max-width: 600px) {
-    #expenses-list {
-        overflow-x: auto;
-    }
 
-    table {
-        min-width: 550px;
-    }
-
-    th,
-    td {
-        padding: 10px;
-        font-size: 13px;
-    }
-
-    .expense-form {
-        padding: 15px;
-    }
+.category-card p {
+    color: var(--muted-color);
+    font-size: 13px;
 }
-/* Page Heading Card */
-#page-header {
-    background-color: var(--primary-color);
-    color: var(--white);
 
-    /* Box Model */
-    margin: 10px 0 25px;
-    padding: 30px 20px;
-    border: 2px solid var(--primary-color);
-    border-radius: 15px;
-
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+.amount-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin-top: 5px;
 }
-/* Add Expense Form Card */
-.expense-form {
+
+.amount-row strong {
+    color: var(--primary-color);
+    font-size: 15px;
+}
+
+.amount-row small {
+    color: var(--muted-color);
+    font-size: 11px;
+}
+
+
+/* =========================
+   10. RECENT TRANSACTIONS
+========================= */
+
+.transactions-section {
     background-color: var(--white);
-
-    /* Box Model */
-    margin: 0 0 25px;
     padding: 25px;
-    border: 1px solid #ddd;
     border-radius: 12px;
-
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
-}
-/* Expense Table Card */
-#expenses-list {
-    background-color: var(--white);
-
-    /* Box Model */
-    margin: 0 0 25px;
-    padding: 25px;
-    border: 1px solid #ddd;
-    border-radius: 12px;
-
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
-
-    overflow-x: auto;
-}
-/* Main Page Layout */
-main {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 10px;
+    border: 1px solid #E5E9ED;
 }
 
-/* Consistent box sizing */
-* {
-    box-sizing: border-box;
+.transactions-section h2 {
+    margin-bottom: 15px;
+}
+
+.transaction-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+    padding: 16px 0;
+
+    border-bottom: 1px solid #EEEEEE;
+}
+
+.transaction-row:last-child {
+    border-bottom: none;
+}
+
+.transaction-row div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.transaction-row small {
+    color: var(--muted-color);
+    font-size: 12px;
+}
+
+.expense {
+    color: #D9534F;
+    font-size: 14px;
+}
+
+
+/* =========================
+   11. RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 1000px) {
+
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .summary-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        padding: 18px;
+    }
+
+    .logo {
+        margin-bottom: 20px;
+    }
+
+    .navigation {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .nav-link {
+        font-size: 12px;
+        padding: 9px;
+    }
+
+    .sidebar-footer {
+        margin-top: 20px;
+    }
+
+    .main-content {
+        padding: 18px;
+    }
+
+    /* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+
+    /* Collapse dashboard into one column */
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        padding: 18px;
+    }
+
+    .logo {
+        margin-bottom: 20px;
+    }
+
+    .navigation {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .nav-link {
+        font-size: 12px;
+        padding: 9px;
+    }
+
+    .sidebar-footer {
+        margin-top: 20px;
+    }
+
+    /* Main content */
+    .main-content {
+        padding: 18px;
+    }
+
+    /* Header */
+    .top-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Summary cards */
+    .summary-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Expense category cards */
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Section heading */
+    .section-heading {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+/* =========================
+   DARK THEME
+   STRETCH GOAL
+========================= */
+
+@media (prefers-color-scheme: dark) {
+
+    :root {
+        --brand-color: #102D25;
+        --accent-color: #45B987;
+
+        --background-color: #121A17;
+        --surface-color: #1E2924;
+        --surface-secondary: #293B32;
+
+        --text-primary: #F1F5F2;
+        --text-secondary: #B4C2BA;
+
+        --border-color: #35443C;
+        --danger-color: #FF7777;
+
+        --card-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+    }
 }
